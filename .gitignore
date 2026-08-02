@@ -1,0 +1,21 @@
+# Archivos temporales y de desarrollo local
+pscp.exe
+plink.exe
+server.ps1
+mingit/
+mingit.zip
+*.tmp
+*.log
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Variables de entorno locales
+.env
+.env.local
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini

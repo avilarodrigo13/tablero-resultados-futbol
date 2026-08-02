@@ -1,0 +1,164 @@
+{
+  "yesterday": [
+    {
+      "leagueName": "Liga Profesional",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1.png",
+      "matches": [
+        {
+          "home": "BEL",
+          "away": "ROS",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/4.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/17.png",
+          "homeScore": 2,
+          "awayScore": 1,
+          "status": "FINISHED",
+          "date": "01/08",
+          "time": "20:00"
+        }
+      ]
+    },
+    {
+      "leagueName": "LaLiga",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png",
+      "matches": [
+        {
+          "home": "RMA",
+          "away": "BAR",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/86.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/83.png",
+          "homeScore": 3,
+          "awayScore": 2,
+          "status": "FINISHED",
+          "date": "01/08",
+          "time": "16:00"
+        }
+      ]
+    }
+  ],
+  "today": [
+    {
+      "leagueName": "Nations League",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2395.png",
+      "matches": [
+        {
+          "home": "ESP",
+          "away": "GER",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/444.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/479.png",
+          "homeScore": 1,
+          "awayScore": 0,
+          "status": "IN_PLAY",
+          "minute": "58'",
+          "date": "01/08",
+          "time": "15:45"
+        }
+      ]
+    },
+    {
+      "leagueName": "Copa Libertadores",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/58.png",
+      "matches": [
+        {
+          "home": "FLU",
+          "away": "BOC",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/3445.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/5.png",
+          "homeScore": 1,
+          "awayScore": 1,
+          "status": "IN_PLAY",
+          "minute": "72'",
+          "date": "01/08",
+          "time": "19:15"
+        }
+      ]
+    },
+    {
+      "leagueName": "Champions League",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2.png",
+      "matches": [
+        {
+          "home": "MCI",
+          "away": "ARS",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/359.png",
+          "homeScore": 0,
+          "awayScore": 0,
+          "status": "IN_PLAY",
+          "minute": "15'",
+          "date": "01/08",
+          "time": "16:00"
+        }
+      ]
+    },
+    {
+      "leagueName": "Carabao Cup",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1208.png",
+      "matches": [
+        {
+          "home": "CHE",
+          "away": "LIV",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/363.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/364.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "TIMED",
+          "date": "01/08",
+          "time": "17:00"
+        }
+      ]
+    },
+    {
+      "leagueName": "Liga Profesional",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1.png",
+      "matches": [
+        {
+          "home": "RIV",
+          "away": "BEL",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/16.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/4.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "TIMED",
+          "date": "01/08",
+          "time": "21:30"
+        }
+      ]
+    }
+  ],
+  "tomorrow": [
+    {
+      "leagueName": "Premier League",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/23.png",
+      "matches": [
+        {
+          "home": "ARS",
+          "away": "MCI",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/359.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "TIMED",
+          "date": "02/08",
+          "time": "15:00"
+        }
+      ]
+    },
+    {
+      "leagueName": "Supercopa Arg.",
+      "leagueCrest": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1.png",
+      "matches": [
+        {
+          "home": "BOC",
+          "away": "ROS",
+          "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/5.png",
+          "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/17.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "TIMED",
+          "date": "02/08",
+          "time": "19:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tablero dinámico de resultados multitorneo, optimizado para pantallas LED modulares publicitarias de 1024x128 px (equivalente a un banner físico continuo de 2048x64 px).">
+    <title>Tablero de Resultados Multiliga 1024x128</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="logo_tdf.png">
+    <link rel="stylesheet" href="style.css?v=20260725">
+</head>
+<body>
+    <!-- Encabezado para accesibilidad y SEO sin interferir en el diseño LED -->
+    <h1 class="sr-only" id="main-title">Tablero LED de Resultados de Fútbol Multiliga</h1>
+
+    <!-- Elemento oculto para mantener el logo precargado en la memoria de la GPU -->
+    <div class="sr-only" aria-hidden="true">
+        <img src="logo_tdf.png" alt="" id="preload-logo-tdf">
+    </div>
+
+    <!-- Contenedor del lienzo virtual (1024x128 px) -->
+    <div id="canvas" role="region" aria-label="Visualizador de partidos de fútbol">
+        
+        <!-- Mitad superior: representa la mitad izquierda del banner (X: 0 a 1023) -->
+        <div class="viewport" id="top-half">
+            <div class="scroll-container" id="container1">
+                <!-- Se inyectará el contenido desde JS -->
+            </div>
+        </div>
+
+        <!-- Mitad inferior: representa la mitad derecha del banner (X: 1024 a 2047) -->
+        <div class="viewport" id="bottom-half">
+            <div class="scroll-container" id="container2">
+                <!-- Se inyectará el mismo contenido desfasado -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de lógica y renderizado -->
+    <script src="app.js?v=20260725" defer></script>
+</body>
+</html>

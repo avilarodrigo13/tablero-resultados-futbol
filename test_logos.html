@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Visual de Logos - ESPN API</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+            color: #ffcc00;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #111111;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background-color: transparent;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .meta {
+            color: #aaaaaa;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .badge {
+            background-color: #ffcc00;
+            color: #000000;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        .logo-glow-fix {
+            filter: drop-shadow(0px 0px 1px #ffffff) drop-shadow(0px 0px 2px #ffffff);
+        }
+    </style>
+</head>
+<body>
+    <h1>Panel de Verificación Visual de Logos (ESPN API)</h1>
+    
+    <h2>1. Competencias y Torneos</h2>
+    <div class="grid">
+    
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/10.png" alt="Bundesliga" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Bundesliga</div>
+            <div class="meta">Slug: ger.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/41.png" alt="Carabao Cup" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Carabao Cup</div>
+            <div class="meta">Slug: eng.league_cup</div>
+        </div>
+        
+        <div class="card">
+            <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#222;border-radius:50%;">Sin Logo</div>
+            <div class="title">Clasificatorias Euro</div>
+            <div class="meta">Slug: uefa.ecq</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/83.png" alt="Copa América" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Copa América</div>
+            <div class="meta">Slug: conmebol.america</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2320.png" alt="Copa Argentina" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Copa Argentina</div>
+            <div class="meta">Slug: arg.copa</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/58.png" alt="Copa Libertadores" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Copa Libertadores</div>
+            <div class="meta">Slug: conmebol.libertadores</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo logo-glow-fix" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1208.png" alt="Copa Sudamericana" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Copa Sudamericana</div>
+            <div class="meta">Slug: conmebol.sudamericana</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png" alt="Copa del Rey" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Copa del Rey</div>
+            <div class="meta">Slug: esp.copa_del_rey</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2192.png" alt="Coppa Italia" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Coppa Italia</div>
+            <div class="meta">Slug: ita.coppa_italia</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/182.png" alt="Coupe de France" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Coupe de France</div>
+            <div class="meta">Slug: fra.coupe_de_france</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2061.png" alt="DFB-Pokal" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">DFB-Pokal</div>
+            <div class="meta">Slug: ger.dfb_pokal</div>
+        </div>
+        
+        <div class="card">
+            <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#222;border-radius:50%;">Sin Logo</div>
+            <div class="title">Eliminatorias CONMEBOL</div>
+            <div class="meta">Slug: conmebol.wcq</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/74.png" alt="Eurocopa" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Eurocopa</div>
+            <div class="meta">Slug: uefa.euro</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/40.png" alt="FA Cup" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">FA Cup</div>
+            <div class="meta">Slug: eng.fa</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png" alt="LaLiga" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">LaLiga</div>
+            <div class="meta">Slug: esp.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/1.png" alt="Liga Profesional Argentina" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Liga Profesional Argentina</div>
+            <div class="meta">Slug: arg.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/9.png" alt="Ligue 1" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Ligue 1</div>
+            <div class="meta">Slug: fra.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/23.png" alt="Premier League" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Premier League</div>
+            <div class="meta">Slug: eng.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png" alt="Serie A" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Serie A</div>
+            <div class="meta">Slug: ita.1</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2343.png" alt="Supercopa Argentina" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">Supercopa Argentina</div>
+            <div class="meta">Slug: arg.supercopa</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2.png" alt="UEFA Champions League" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">UEFA Champions League</div>
+            <div class="meta">Slug: uefa.champions</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/20296.png" alt="UEFA Conference League" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">UEFA Conference League</div>
+            <div class="meta">Slug: uefa.europa.conf</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2310.png" alt="UEFA Europa League" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">UEFA Europa League</div>
+            <div class="meta">Slug: uefa.europa</div>
+        </div>
+        
+        <div class="card">
+            <img class="comp-logo logo-glow-fix" src="https://a.espncdn.com/i/leaguelogos/soccer/500-dark/2395.png" alt="UEFA Nations League" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+            <div class="title">UEFA Nations League</div>
+            <div class="meta">Slug: uefa.nations</div>
+        </div>
+        
+    </div>
+    
+        <h2>2. Clubes de Bundesliga (Alemania) (18 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/598.png" alt="1. FC Union Berlin" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">1. FC Union Berlin</div>
+                <div class="badge">FCU</div>
+                <div class="meta">ID: 598</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/131.png" alt="Bayer Leverkusen" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Bayer Leverkusen</div>
+                <div class="badge">B04</div>
+                <div class="meta">ID: 131</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/132.png" alt="Bayern Munich" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Bayern Munich</div>
+                <div class="badge">MUN</div>
+                <div class="meta">ID: 132</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/124.png" alt="Borussia Dortmund" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Borussia Dortmund</div>
+                <div class="badge">DOR</div>
+                <div class="meta">ID: 124</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/268.png" alt="Borussia Mönchengladbach" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Borussia Mönchengladbach</div>
+                <div class="badge">BMG</div>
+                <div class="meta">ID: 268</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/125.png" alt="Eintracht Frankfurt" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Eintracht Frankfurt</div>
+                <div class="badge">SGE</div>
+                <div class="meta">ID: 125</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3841.png" alt="FC Augsburg" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">FC Augsburg</div>
+                <div class="badge">FCA</div>
+                <div class="meta">ID: 3841</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/122.png" alt="FC Cologne" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">FC Cologne</div>
+                <div class="badge">KOE</div>
+                <div class="meta">ID: 122</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/127.png" alt="Hamburg SV" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Hamburg SV</div>
+                <div class="badge">HSV</div>
+                <div class="meta">ID: 127</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2950.png" alt="Mainz" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Mainz</div>
+                <div class="badge">M05</div>
+                <div class="meta">ID: 2950</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/11420.png" alt="RB Leipzig" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">RB Leipzig</div>
+                <div class="badge">RBL</div>
+                <div class="meta">ID: 11420</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/126.png" alt="SC Freiburg" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">SC Freiburg</div>
+                <div class="badge">SCF</div>
+                <div class="meta">ID: 126</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3307.png" alt="SC Paderborn 07" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">SC Paderborn 07</div>
+                <div class="badge">SCP</div>
+                <div class="meta">ID: 3307</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/10388.png" alt="SV Elversberg" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">SV Elversberg</div>
+                <div class="badge">ELV</div>
+                <div class="meta">ID: 10388</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/133.png" alt="Schalke 04" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Schalke 04</div>
+                <div class="badge">S04</div>
+                <div class="meta">ID: 133</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/7911.png" alt="TSG Hoffenheim" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">TSG Hoffenheim</div>
+                <div class="badge">TSG</div>
+                <div class="meta">ID: 7911</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/134.png" alt="VfB Stuttgart" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">VfB Stuttgart</div>
+                <div class="badge">VFB</div>
+                <div class="meta">ID: 134</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/137.png" alt="Werder Bremen" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Werder Bremen</div>
+                <div class="badge">SVW</div>
+                <div class="meta">ID: 137</div>
+            </div>
+            
+        </div>
+        
+        <h2>2. Clubes de LaLiga (España) (20 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/96.png" alt="Alavés" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Alavés</div>
+                <div class="badge">ALA</div>
+                <div class="meta">ID: 96</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/93.png" alt="Athletic Club" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Athletic Club</div>
+                <div class="badge">ATH</div>
+                <div class="meta">ID: 93</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/1068.png" alt="Atlético Madrid" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Atlético Madrid</div>
+                <div class="badge">ATM</div>
+                <div class="meta">ID: 1068</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/83.png" alt="Barcelona" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Barcelona</div>
+                <div class="badge">BAR</div>
+                <div class="meta">ID: 83</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/85.png" alt="Celta Vigo" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Celta Vigo</div>
+                <div class="badge">CEL</div>
+                <div class="meta">ID: 85</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/90.png" alt="Deportivo La Coruña" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Deportivo La Coruña</div>
+                <div class="badge">DEP</div>
+                <div class="meta">ID: 90</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3751.png" alt="Elche" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Elche</div>
+                <div class="badge">ELC</div>
+                <div class="meta">ID: 3751</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/88.png" alt="Espanyol" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Espanyol</div>
+                <div class="badge">ESP</div>
+                <div class="meta">ID: 88</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2922.png" alt="Getafe" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Getafe</div>
+                <div class="badge">GET</div>
+                <div class="meta">ID: 2922</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/1538.png" alt="Levante" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Levante</div>
+                <div class="badge">LEV</div>
+                <div class="meta">ID: 1538</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/99.png" alt="Málaga" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Málaga</div>
+                <div class="badge">MCF</div>
+                <div class="meta">ID: 99</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/97.png" alt="Osasuna" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Osasuna</div>
+                <div class="badge">OSA</div>
+                <div class="meta">ID: 97</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/87.png" alt="Racing Santander" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Racing Santander</div>
+                <div class="badge">RAC</div>
+                <div class="meta">ID: 87</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/101.png" alt="Rayo Vallecano" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Rayo Vallecano</div>
+                <div class="badge">RAY</div>
+                <div class="meta">ID: 101</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/244.png" alt="Real Betis" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Real Betis</div>
+                <div class="badge">BET</div>
+                <div class="meta">ID: 244</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/86.png" alt="Real Madrid" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Real Madrid</div>
+                <div class="badge">RMA</div>
+                <div class="meta">ID: 86</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/89.png" alt="Real Sociedad" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Real Sociedad</div>
+                <div class="badge">RSO</div>
+                <div class="meta">ID: 89</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/243.png" alt="Sevilla" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Sevilla</div>
+                <div class="badge">SEV</div>
+                <div class="meta">ID: 243</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/94.png" alt="Valencia" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Valencia</div>
+                <div class="badge">VAL</div>
+                <div class="meta">ID: 94</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/102.png" alt="Villarreal" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Villarreal</div>
+                <div class="badge">VIL</div>
+                <div class="meta">ID: 102</div>
+            </div>
+            
+        </div>
+        
+        <h2>2. Clubes de Liga Profesional Argentina (30 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/9739.png" alt="Aldosivi" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Aldosivi</div>
+                <div class="badge">ALDO</div>
+                <div class="meta">ID: 9739</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3.png" alt="Argentinos Juniors" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Argentinos Juniors</div>
+                <div class="badge">ARGJ</div>
+                <div class="meta">ID: 3</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/9785.png" alt="Atlético Tucumán" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Atlético Tucumán</div>
+                <div class="badge">CAT</div>
+                <div class="meta">ID: 9785</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/235.png" alt="Banfield" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Banfield</div>
+                <div class="badge">BAN</div>
+                <div class="meta">ID: 235</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/10060.png" alt="Barracas Central" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Barracas Central</div>
+                <div class="badge">BAR</div>
+                <div class="meta">ID: 10060</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/4.png" alt="Belgrano (Córdoba)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Belgrano (Córdoba)</div>
+                <div class="badge">BEL</div>
+                <div class="meta">ID: 4</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/5.png" alt="Boca Juniors" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Boca Juniors</div>
+                <div class="badge">CABJ</div>
+                <div class="meta">ID: 5</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/11989.png" alt="Central Córdoba (Santiago del Estero)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Central Córdoba (Santiago del Estero)</div>
+                <div class="badge">CTR</div>
+                <div class="meta">ID: 11989</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/8950.png" alt="Defensa y Justicia" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Defensa y Justicia</div>
+                <div class="badge">DYJ</div>
+                <div class="meta">ID: 8950</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/17702.png" alt="Deportivo Riestra" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Deportivo Riestra</div>
+                <div class="badge">RIE</div>
+                <div class="meta">ID: 17702</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/8.png" alt="Estudiantes de La Plata" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Estudiantes de La Plata</div>
+                <div class="badge">EST</div>
+                <div class="meta">ID: 8</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/19685.png" alt="Estudiantes de Río Cuarto" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Estudiantes de Río Cuarto</div>
+                <div class="badge">AAE</div>
+                <div class="meta">ID: 19685</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/11972.png" alt="Gimnasia (Mendoza)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Gimnasia (Mendoza)</div>
+                <div class="badge">GMZ</div>
+                <div class="meta">ID: 11972</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/9.png" alt="Gimnasia La Plata" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Gimnasia La Plata</div>
+                <div class="badge">GLP</div>
+                <div class="meta">ID: 9</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/10.png" alt="Huracán" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Huracán</div>
+                <div class="badge">HUR</div>
+                <div class="meta">ID: 10</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/11.png" alt="Independiente" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Independiente</div>
+                <div class="badge">IND</div>
+                <div class="meta">ID: 11</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/9744.png" alt="Independiente Rivadavia" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Independiente Rivadavia</div>
+                <div class="badge">RIV</div>
+                <div class="meta">ID: 9744</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2975.png" alt="Instituto (Córdoba)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Instituto (Córdoba)</div>
+                <div class="badge">IACC</div>
+                <div class="meta">ID: 2975</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/12.png" alt="Lanús" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lanús</div>
+                <div class="badge">LAN</div>
+                <div class="meta">ID: 12</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/14.png" alt="Newell's Old Boys" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Newell's Old Boys</div>
+                <div class="badge">NOB</div>
+                <div class="meta">ID: 14</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/7764.png" alt="Platense" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Platense</div>
+                <div class="badge">PLA</div>
+                <div class="meta">ID: 7764</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/15.png" alt="Racing Club" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Racing Club</div>
+                <div class="badge">RAC</div>
+                <div class="meta">ID: 15</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/16.png" alt="River Plate" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">River Plate</div>
+                <div class="badge">RIV</div>
+                <div class="meta">ID: 16</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/17.png" alt="Rosario Central" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Rosario Central</div>
+                <div class="badge">ROS</div>
+                <div class="meta">ID: 17</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/18.png" alt="San Lorenzo" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">San Lorenzo</div>
+                <div class="badge">SLO</div>
+                <div class="meta">ID: 18</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/10158.png" alt="Sarmiento (Junín)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Sarmiento (Junín)</div>
+                <div class="badge">SARM</div>
+                <div class="meta">ID: 10158</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/19.png" alt="Talleres (Córdoba)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Talleres (Córdoba)</div>
+                <div class="badge">TALL</div>
+                <div class="meta">ID: 19</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/7767.png" alt="Tigre" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Tigre</div>
+                <div class="badge">TIG</div>
+                <div class="meta">ID: 7767</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/20.png" alt="Unión (Santa Fe)" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Unión (Santa Fe)</div>
+                <div class="badge">USF</div>
+                <div class="meta">ID: 20</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/21.png" alt="Vélez Sarsfield" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Vélez Sarsfield</div>
+                <div class="badge">VEL</div>
+                <div class="meta">ID: 21</div>
+            </div>
+            
+        </div>
+        
+        <h2>2. Clubes de Ligue 1 (Francia) (18 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/172.png" alt="AJ Auxerre" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">AJ Auxerre</div>
+                <div class="badge">AUX</div>
+                <div class="meta">ID: 172</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/174.png" alt="AS Monaco" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">AS Monaco</div>
+                <div class="badge">MON</div>
+                <div class="meta">ID: 174</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/7868.png" alt="Angers" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Angers</div>
+                <div class="badge">ANG</div>
+                <div class="meta">ID: 7868</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/6997.png" alt="Brest" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Brest</div>
+                <div class="badge">BRE</div>
+                <div class="meta">ID: 6997</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3236.png" alt="Le Havre AC" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Le Havre AC</div>
+                <div class="badge">HAC</div>
+                <div class="meta">ID: 3236</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2697.png" alt="Le Mans" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Le Mans</div>
+                <div class="badge">MNS</div>
+                <div class="meta">ID: 2697</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/175.png" alt="Lens" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lens</div>
+                <div class="badge">RCL</div>
+                <div class="meta">ID: 175</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/166.png" alt="Lille" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lille</div>
+                <div class="badge">LILL</div>
+                <div class="meta">ID: 166</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/273.png" alt="Lorient" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lorient</div>
+                <div class="badge">LOR</div>
+                <div class="meta">ID: 273</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/167.png" alt="Lyon" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lyon</div>
+                <div class="badge">LYON</div>
+                <div class="meta">ID: 167</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/176.png" alt="Marseille" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Marseille</div>
+                <div class="badge">OLM</div>
+                <div class="meta">ID: 176</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2502.png" alt="Nice" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Nice</div>
+                <div class="badge">NICE</div>
+                <div class="meta">ID: 2502</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/6851.png" alt="Paris FC" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Paris FC</div>
+                <div class="badge">PAR</div>
+                <div class="meta">ID: 6851</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/160.png" alt="Paris Saint-Germain" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Paris Saint-Germain</div>
+                <div class="badge">PSG</div>
+                <div class="meta">ID: 160</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/169.png" alt="Stade Rennais" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Stade Rennais</div>
+                <div class="badge">REN</div>
+                <div class="meta">ID: 169</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/180.png" alt="Strasbourg" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Strasbourg</div>
+                <div class="badge">STR</div>
+                <div class="meta">ID: 180</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/179.png" alt="Toulouse" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Toulouse</div>
+                <div class="badge">TOU</div>
+                <div class="meta">ID: 179</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/170.png" alt="Troyes" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Troyes</div>
+                <div class="badge">TRY</div>
+                <div class="meta">ID: 170</div>
+            </div>
+            
+        </div>
+        
+        <h2>2. Clubes de Premier League (Inglaterra) (20 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/349.png" alt="AFC Bournemouth" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">AFC Bournemouth</div>
+                <div class="badge">BOU</div>
+                <div class="meta">ID: 349</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/359.png" alt="Arsenal" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Arsenal</div>
+                <div class="badge">ARS</div>
+                <div class="meta">ID: 359</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/362.png" alt="Aston Villa" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Aston Villa</div>
+                <div class="badge">AVL</div>
+                <div class="meta">ID: 362</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/337.png" alt="Brentford" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Brentford</div>
+                <div class="badge">BRE</div>
+                <div class="meta">ID: 337</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/331.png" alt="Brighton & Hove Albion" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Brighton & Hove Albion</div>
+                <div class="badge">BHA</div>
+                <div class="meta">ID: 331</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/363.png" alt="Chelsea" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Chelsea</div>
+                <div class="badge">CHE</div>
+                <div class="meta">ID: 363</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/388.png" alt="Coventry City" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Coventry City</div>
+                <div class="badge">COV</div>
+                <div class="meta">ID: 388</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/384.png" alt="Crystal Palace" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Crystal Palace</div>
+                <div class="badge">CRY</div>
+                <div class="meta">ID: 384</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/368.png" alt="Everton" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Everton</div>
+                <div class="badge">EVE</div>
+                <div class="meta">ID: 368</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/370.png" alt="Fulham" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Fulham</div>
+                <div class="badge">FUL</div>
+                <div class="meta">ID: 370</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/306.png" alt="Hull City" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Hull City</div>
+                <div class="badge">HUL</div>
+                <div class="meta">ID: 306</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/373.png" alt="Ipswich Town" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Ipswich Town</div>
+                <div class="badge">IPS</div>
+                <div class="meta">ID: 373</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/357.png" alt="Leeds United" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Leeds United</div>
+                <div class="badge">LEE</div>
+                <div class="meta">ID: 357</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/364.png" alt="Liverpool" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Liverpool</div>
+                <div class="badge">LIV</div>
+                <div class="meta">ID: 364</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png" alt="Manchester City" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Manchester City</div>
+                <div class="badge">MNC</div>
+                <div class="meta">ID: 382</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/360.png" alt="Manchester United" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Manchester United</div>
+                <div class="badge">MAN</div>
+                <div class="meta">ID: 360</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/361.png" alt="Newcastle United" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Newcastle United</div>
+                <div class="badge">NEW</div>
+                <div class="meta">ID: 361</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/393.png" alt="Nottingham Forest" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Nottingham Forest</div>
+                <div class="badge">NFO</div>
+                <div class="meta">ID: 393</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/366.png" alt="Sunderland" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Sunderland</div>
+                <div class="badge">SUN</div>
+                <div class="meta">ID: 366</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/367.png" alt="Tottenham Hotspur" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Tottenham Hotspur</div>
+                <div class="badge">TOT</div>
+                <div class="meta">ID: 367</div>
+            </div>
+            
+        </div>
+        
+        <h2>2. Clubes de Serie A (Italia) (20 equipos)</h2>
+        <div class="grid">
+        
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/103.png" alt="AC Milan" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">AC Milan</div>
+                <div class="badge">MIL</div>
+                <div class="meta">ID: 103</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/104.png" alt="AS Roma" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">AS Roma</div>
+                <div class="badge">ROMA</div>
+                <div class="meta">ID: 104</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/105.png" alt="Atalanta" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Atalanta</div>
+                <div class="badge">ATA</div>
+                <div class="meta">ID: 105</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/107.png" alt="Bologna" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Bologna</div>
+                <div class="badge">BOL</div>
+                <div class="meta">ID: 107</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2925.png" alt="Cagliari" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Cagliari</div>
+                <div class="badge">CAG</div>
+                <div class="meta">ID: 2925</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/2572.png" alt="Como" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Como</div>
+                <div class="badge">COMO</div>
+                <div class="meta">ID: 2572</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/109.png" alt="Fiorentina" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Fiorentina</div>
+                <div class="badge">FIO</div>
+                <div class="meta">ID: 109</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/4057.png" alt="Frosinone" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Frosinone</div>
+                <div class="badge">FRO</div>
+                <div class="meta">ID: 4057</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3263.png" alt="Genoa" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Genoa</div>
+                <div class="badge">GEN</div>
+                <div class="meta">ID: 3263</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/110.png" alt="Internazionale" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Internazionale</div>
+                <div class="badge">INT</div>
+                <div class="meta">ID: 110</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/111.png" alt="Juventus" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Juventus</div>
+                <div class="badge">JUV</div>
+                <div class="meta">ID: 111</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/112.png" alt="Lazio" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lazio</div>
+                <div class="badge">LAZ</div>
+                <div class="meta">ID: 112</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/113.png" alt="Lecce" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Lecce</div>
+                <div class="badge">LEC</div>
+                <div class="meta">ID: 113</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/4007.png" alt="Monza" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Monza</div>
+                <div class="badge">MON</div>
+                <div class="meta">ID: 4007</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/114.png" alt="Napoli" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Napoli</div>
+                <div class="badge">NAP</div>
+                <div class="meta">ID: 114</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/115.png" alt="Parma" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Parma</div>
+                <div class="badge">PAR</div>
+                <div class="meta">ID: 115</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/3997.png" alt="Sassuolo" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Sassuolo</div>
+                <div class="badge">SAS</div>
+                <div class="meta">ID: 3997</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/239.png" alt="Torino" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Torino</div>
+                <div class="badge">TOR</div>
+                <div class="meta">ID: 239</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/118.png" alt="Udinese" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Udinese</div>
+                <div class="badge">UDI</div>
+                <div class="meta">ID: 118</div>
+            </div>
+            
+            <div class="card">
+                <img src="https://a.espncdn.com/i/teamlogos/soccer/500-dark/17530.png" alt="Venezia" onerror="if(this.src.includes('500-dark')){this.src=this.src.replace('500-dark','500');}else{this.src='https://placehold.co/80x80/222/fff?text=Error';}">
+                <div class="title">Venezia</div>
+                <div class="badge">VEN</div>
+                <div class="meta">ID: 17530</div>
+            </div>
+            
+        </div>
+        
+</body>
+</html>

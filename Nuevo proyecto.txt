@@ -1,0 +1,67 @@
+# Proyecto: Tablero de Resultados Multiliga (Cloud-Native)
+
+Este proyecto evoluciona el tablero de resultados del Mundial hacia un sistema dinámico multitorneo. La arquitectura se desarrollará y probará inicialmente de forma 100% local antes de ser migrada por completo a la nube para eliminar la dependencia de servidores hogareños.
+
+## Especificaciones de Pantalla y Animación (Base)
+* **Formato físico:** Banner continuo de 2048x64 px (mapeado en dos viewports de 1024x64 px)[cite: 1].
+* **Flujo de Introducción:** 
+  1. Animación "Templo del Fútbol" (con sus logos)[cite: 1].
+  2. Animación "Camino Sagrado"[cite: 1].
+* **Estructura de la Playlist:** Secuencia cíclica fija: Introducciones -> Ayer -> Hoy -> Mañana[cite: 1].
+
+---
+
+## Fase 1: Desarrollo Local - Rediseño del Modelo de Datos (JSON) y Jerarquía de Ligas
+* **Objetivo:** Definir la estructura jerárquica de `partidos.json` y validar el algoritmo de ordenamiento con un script de datos de prueba local[cite: 1].
+* **Regla de Priorización y Orden de Competencias (Estricto):**
+  1. **Selecciones (Solo Oficiales):** Copa América, Eurocopa, UEFA Nations League, Eliminatorias, Clasificatorias Euro. *(Amistosos excluidos).*[cite: 1]
+  2. **Clubes Región Argentina:** CONMEBOL Libertadores -> CONMEBOL Sudamericana -> Liga Profesional Argentina -> Copa Argentina -> Trofeo de Campeones / Supercopas[cite: 1].
+  3. **Clubes Europa (Internacionales):** UEFA Champions League -> UEFA Europa League -> UEFA Conference League[cite: 1].
+  4. **Clubes Europa (Países por relevancia y sus copas):** 
+     * **Inglaterra:** Premier League, FA Cup, Carabao Cup[cite: 1].
+     * **España:** LaLiga, Copa del Rey[cite: 1].
+     * **Italia:** Serie A, Copa de Italia.
+     * **Alemania:** Bundesliga, Copa de Alemania.
+     * **Francia:** Ligue 1, Copa de Francia.
+* **Tareas:**
+  * Diseñar el esquema JSON local donde cada bloque (`yesterday`, `today`, `tomorrow`) contenga el array de ligas ordenadas bajo esta estricta jerarquía[cite: 1]. Cada liga incluirá su escudo SVG, nombre y partidos (con siglas y escudos SVG de los clubes)[cite: 1].
+  * Crear el script simulador `mock_updater.py` para generar resultados ficticios locales respetando este ordenamiento automático[cite: 1].
+
+## Fase 2: Desarrollo Local - Frontend y Nueva Lógica de Animación continua
+* **Objetivo:** Construir y pulir la interfaz web ejecutando un servidor de desarrollo local (`http://127.0.0.1:8000`)[cite: 1].
+* **Restricción Crítica de Rendimiento:** Queda estrictamente prohibido el uso de animaciones CSS secundarias (como parpadeos de texto o efectos repetitivos) dentro del scroll para evitar caídas de frames (lag) en la Raspberry Pi. Todo el texto interno debe ser visualmente estático[cite: 1].
+* **Requerimientos Visuales y Dinámica de Transición:**
+  * **Cabecera Móvil:** Cada competencia inicia con su nombre y escudo SVG desplazándose de derecha a izquierda[cite: 1].
+  * **Flujo Continuo:** Los partidos siguen inmediatamente a la cabecera uno al lado del otro, de forma fluida y sin baches ni superposiciones[cite: 1].
+  * **Efecto de Pantalla Limpia:** Al finalizar una liga, se espera a que el último partido salga por completo de la pantalla. Con el tablero en negro, ingresa de inmediato la siguiente competencia[cite: 1].
+  * **Formatos de Estado del Partido (Mantenidos del original):**
+    * *Por jugar:* Se muestran siglas fijos y escudos limpios, sin indicadores de marcador[cite: 1].
+    * *En vivo:* Muestra el resultado junto al tiempo transcurrido renderizado en color rojo fijo (estático)[cite: 1].
+    * *Finalizado:* Muestra el resultado de forma definitiva en texto plano estándar[cite: 1].
+* **Tareas:**
+  * Modificar `app.js` localmente para controlar este ciclo preciso de animaciones y transiciones limpias[cite: 1].
+
+## Fase 3: Desarrollo Local - Integración Real con la API Multiliga
+* **Objetivo:** Conectar el script de producción `updater.py` a los endpoints reales de la API desde tu computadora de desarrollo[cite: 1].
+* **Tareas:**
+  * Mapear los IDs reales de las competencias y optimizar las consultas locales para respetar los límites de la API (rate limits)[cite: 1].
+  * Automatizar la descarga de escudos oficiales de clubes y ligas en formato SVG hacia carpetas locales de tu máquina[cite: 1].
+  * Verificar en el navegador local que los datos en vivo e históricos se actualicen de manera exacta[cite: 1].
+
+## Fase 4: Migración a Servidor Online Gratuito (Cloud)
+* **Objetivo:** Una vez que el sistema esté 100% aceitado y verificado localmente, migrar el frontend y el backend a la nube sin costo[cite: 1].
+* **Tareas:**
+  * Alojar el frontend de la web en GitHub Pages o Vercel[cite: 1].
+  * Configurar GitHub Actions o Render/Railway para ejecutar el script `updater.py` de forma automatizada en la nube[cite: 1].
+  * Ocultar de forma segura el Token de la API mediante variables de entorno (Secrets)[cite: 1].
+
+## Fase 5: Implementación en Hardware (Raspberry Pi)
+* **Objetivo:** Configurar el tablero físico para consumir el proyecto ya desplegado en internet[cite: 1].
+* **Tareas:**
+  * Apuntar el modo kiosco de la Raspberry Pi a la nueva URL pública del servidor online[cite: 1].
+  * Monitorear el rendimiento general, la fluidez del paso lineal de partidos y la sincronía exacta del "cosido" de ambas pantallas[cite: 1].
+
+---
+
+## Ideas Futuras / Optimizaciones Pendientes
+* **Mejora de intros:** Pulir las transiciones estéticas entre las pantallas de "Templo del Fútbol" y "Camino Sagrado"[cite: 1].
