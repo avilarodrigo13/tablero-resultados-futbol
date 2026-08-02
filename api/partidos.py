@@ -357,25 +357,19 @@ def get_partidos_data():
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # Separar ruta de parámetros de búsqueda (query)
-        path_parts = self.path.split('?')
-        req_path = path_parts[0]
-        
-        # Endpoint de la API
-        if req_path == '/api/partidos':
-            try:
-                data = get_partidos_data()
-                self.send_response(200)
-                self.send_header('Content-Type', 'application/json; charset=utf-8')
-                self.send_header('Access-Control-Allow-Origin', '*')
-                self.end_headers()
-                self.wfile.write(json.dumps(data, ensure_ascii=False).encode('utf-8'))
-            except Exception as e:
-                self.send_response(500)
-                self.send_header('Content-Type', 'text/plain')
-                self.end_headers()
-                self.wfile.write(f"Error interno del servidor: {e}".encode('utf-8'))
-            return
+        try:
+            data = get_partidos_data()
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Cache-Control', 's-maxage=120, stale-while-revalidate=60')
+            self.end_headers()
+            self.wfile.write(json.dumps(data, ensure_ascii=False).encode('utf-8'))
+        except Exception as e:
+            self.send_response(500)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(f"Error interno del servidor: {e}".encode('utf-8'))
             
         # Servidor estático (solo activo cuando se corre localmente)
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
