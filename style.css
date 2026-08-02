@@ -296,14 +296,8 @@ body {
     width: 2048px;
     height: 64px;
     box-sizing: border-box;
-    /* Degradado radial de alto contraste en verde esmeralda y verde bosque profundo */
-    background: 
-        radial-gradient(circle at 400px center, #1ebd6f 0%, transparent 260px),
-        radial-gradient(circle at 900px center, #1ebd6f 0%, transparent 260px),
-        radial-gradient(circle at 1400px center, #1ebd6f 0%, transparent 260px),
-        radial-gradient(circle at 1900px center, #1ebd6f 0%, transparent 260px),
-        radial-gradient(circle at -148px center, #1ebd6f 0%, transparent 260px),
-        #052012;
+    /* Degradado lineal de alto contraste en verde esmeralda y verde bosque profundo */
+    background: linear-gradient(90deg, #052012 0%, #1ebd6f 20%, #052012 40%, #1ebd6f 60%, #052012 80%, #1ebd6f 100%);
 }
 
 .intro-item {
