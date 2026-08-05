@@ -137,10 +137,13 @@ CACHE_DURATION = timedelta(minutes=2)
 # ==========================================================================
 
 def fetch_scoreboard(slug):
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard"
+    url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard"
     req = urllib.request.Request(
         url,
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*'
+        }
     )
     # Ignorar la verificación SSL para evitar problemas de certificados locales
     ctx = ssl.create_default_context()

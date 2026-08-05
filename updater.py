@@ -117,10 +117,13 @@ def fix_dark_logo(logo_url):
     return logo_url.replace("/500/", "/500-dark/")
 
 def fetch_scoreboard(slug):
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard"
+    url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard"
     req = urllib.request.Request(
         url,
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*'
+        }
     )
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
