@@ -87,8 +87,11 @@ function buildPlaylist(data) {
         });
     }
 
-    // Si no hay ligas con partidos programados hoy
+    // Si no hay ligas con partidos programados hoy, alternar entre la intro y la placa
     if (newPlaylist.length === 0) {
+        newPlaylist.push({
+            type: 'intros'
+        });
         newPlaylist.push({
             type: 'title',
             text: 'Sin partidos programados'
